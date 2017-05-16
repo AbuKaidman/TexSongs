@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage[chorded,showmeasures,onesongcolumn]{songs}
+\newindex{titleidx}{titleidx}
+\repchoruses
+\begin{document}
+    \begin{songs}{titleidx}
+            \beginsong{**songtitle**}[by={**artist**},
+                sr={**scripture reference**},
+                cr={**copyright information**},
+                index={**first line**}]
+            Original Key(s): **source key**
+            Key Range: **range of recommended keys**
+
+            Performance video: **URL**
+            Tutorial video: **URL**
+
+            Recommended Key: **key**
+            Meter: \meter{4}{4}
+
+            % Source Key Chord Fingerings
+            %\gtab{**chordname**}{**stringssounding**:**fretsfingered} \gtab{G}{320033:210034}
+
+            % Played Key Chord Fingerings
+            %\gtab{**chordname**}{**stringssounding**:**fretsfingered} \gtab{G}{320033:210034}~~
+
+            \newchords{**SongName**Intro}
+            \newchords{**SongName**Verse}
+            \newchords{**SongName**PreChorus}
+            \newchords{**SongName**Chorus}
+
+            \beginverse\memorize[**SongName**Intro]
+                Intro:
+                (Strumming pattern)
+                |˅ ˅ ˅ ˅˄˅˄˅˅ ˅˄˅ ˄˅˄˅ ˄˅˄˅
+                % \[Em]~~~~~~~~\[D]~~~~~~~~\[C]~~~~~~~~\[G]
+                % \[D]~~~~~~~~\[Em]~~~~~~~~\[D]~~~~~~~~\[C]
+            \endverse
+            \beginverse\memorize[**SongName**Verse]
+                (Strumming pattern)
+                |˅ ˄˅˄˅ ˄˅˄˅ ˅˄˅ ˄˅˄˅ ˄˅˄˅
+
+                \[**chord**]**lyric**
+            \endverse
+            \beginchorus\memorize[**SongName**PreChorus]
+                (Strumming pattern)
+                |˅ ˄˅˄˅ ˄˅˄˅ ˅˄˅ ˄˅˄˅ ˄˅˄˅
+
+                \[**chord**]**lyric**
+            \endchorus
+            \beginchorus\memorize[**SongName**Chorus]
+                \[**chord**]**lyric**
+            \endchorus
+            \beginverse\replay[**SongName**Intro]
+                \[**chord**]**lyric**
+            \endverse
+            \beginverse\replay[**SongName**Verse]
+                \[**chord**]**lyric**
+            \endverse
+            \beginchorus\replay[**SongName**PreChorus]
+                \[**chord**]**lyric**
+            \endchorus
+            \beginchorus\replay[**SongName**Chorus]
+                \[**chord**]**lyric**
+            \endchorus
+            \beginverse
+                [Bridge:]
+                \[**chord**]**lyric**
+            \endverse
+            \beginchorus\replay[**SongName**Chorus]
+                \[**chord**]**lyric**
+            \endchorus
+        \endsong
+    \end{songs}
+\end{document}
+
