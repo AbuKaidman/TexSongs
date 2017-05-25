@@ -1,5 +1,7 @@
 \documentclass{article}
 \usepackage[chorded,showmeasures,onesongcolumn]{songs}
+\usepackage[linkcolor=red,urlbordercolor={0 1 1},colorlinks=false,hidelinks]{hyperref}
+\usepackage{fontspec,fontenc}
 \newindex{titleidx}{titleidx}
 \repchoruses
 \begin{document}
@@ -8,15 +10,15 @@
                 sr={**scripture reference**},
                 cr={**copyright information**},
                 index={**first line**}]
-            Original Key(s): **source key**
-            Key Range: **range of recommended keys**
+            Original Key(s): XX ~~~
+            Key Range: XX ~~~
+            Meter: [$\frac{4}{4}$]~~~ \meter{4}{4} ~~~
 
-            Performance video: **URL**
-            Tutorial video: **URL**
+            {\tiny References\footnote{Performance video: [https://goo.gl/.]
+                            Tutorial video: [https://goo.gl/.]
+                            \href{http://www.worshiptogether.com/songs/.}{song page}}}
 
-            Recommended Key: **key**
-            Meter: \meter{4}{4}
-
+            [Key of X w. \capo{0} ➝ Key of X]
             % Source Key Chord Fingerings
             %\gtab{**chordname**}{**stringssounding**:**fretsfingered} \gtab{G}{320033:210034}
 
@@ -27,42 +29,31 @@
             \newchords{**SongName**Verse}
             \newchords{**SongName**PreChorus}
             \newchords{**SongName**Chorus}
+            \newchords{**SongName**Bridge}
 
-            \beginverse\memorize[**SongName**Intro]
+            \beginverse*\memorize[**SongName**Intro]
                 Intro:
-                (Strumming pattern)
-                |˅ ˅ ˅ ˅˄˅˄˅˅ ˅˄˅ ˄˅˄˅ ˄˅˄˅
-                % \[Em]~~~~~~~~\[D]~~~~~~~~\[C]~~~~~~~~\[G]
-                % \[D]~~~~~~~~\[Em]~~~~~~~~\[D]~~~~~~~~\[C]
+                [(Strumming pattern:) |˅ ˅ ˅ ˅˄˅˄˅˅ ˅˄˅ ˄˅˄˅ ˄˅˄˅]
+                % \[.]~~~~~~~~\[.]~~~~~~~~\[.]~~~~~~~~\[.]
             \endverse
             \beginverse\memorize[**SongName**Verse]
-                (Strumming pattern)
-                |˅ ˄˅˄˅ ˄˅˄˅ ˅˄˅ ˄˅˄˅ ˄˅˄˅
-
-                \[**chord**]**lyric**
-            \endverse
-            \beginchorus\memorize[**SongName**PreChorus]
-                (Strumming pattern)
-                |˅ ˄˅˄˅ ˄˅˄˅ ˅˄˅ ˄˅˄˅ ˄˅˄˅
-
-                \[**chord**]**lyric**
-            \endchorus
-            \beginchorus\memorize[**SongName**Chorus]
-                \[**chord**]**lyric**
-            \endchorus
-            \beginverse\replay[**SongName**Intro]
+                [(Strumming pattern:) |˅ ˄˅˄˅ ˄˅˄˅ ˅˄˅ ˄˅˄˅ ˄˅˄˅]
                 \[**chord**]**lyric**
             \endverse
             \beginverse\replay[**SongName**Verse]
                 \[**chord**]**lyric**
             \endverse
-            \beginchorus\replay[**SongName**PreChorus]
+            \beginchorus\memorize[**SongName**PreChorus]
+                [(Strumming pattern:) |˅ ˄˅˄˅ ˄˅˄˅ ˅˄˅ ˄˅˄˅ ˄˅˄˅]
                 \[**chord**]**lyric**
             \endchorus
-            \beginchorus\replay[**SongName**Chorus]
+            \beginchorus\memorize[**SongName**Chorus]
                 \[**chord**]**lyric**
             \endchorus
-            \beginverse
+            \beginverse\replay[**SongName**Verse]
+                \[**chord**]**lyric**
+            \endverse
+            \beginverse*\memorize[**SongName**Bridge]
                 [Bridge:]
                 \[**chord**]**lyric**
             \endverse
